@@ -1,4 +1,4 @@
-function show_hide_password(target) {
+function show_hide_password() {
   var input = document.getElementById("password");
   var iconShow = document.querySelector(".icon-show");
   var iconHide = document.querySelector(".icon-hide");
