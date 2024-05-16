@@ -1,7 +1,7 @@
 function show_hide_password() {
-  var input = document.getElementById("password");
-  var iconShow = document.querySelector(".icon-show");
-  var iconHide = document.querySelector(".icon-hide");
+  let input = document.getElementById("password");
+  let iconShow = document.querySelector(".icon-show");
+  let iconHide = document.querySelector(".icon-hide");
   if (input.getAttribute("type") == "password") {
     input.setAttribute("type", "text");
     iconShow.style.setProperty("display", "none");
