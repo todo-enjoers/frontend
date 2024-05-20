@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="to_do-style.css" />
+  </head>
+  <body class="body">
+    <div class="layout">
+      <div class="side-bar">
+        <p>главная</p>
+        <p>задания</p>
+        <p>рецепты</p>
+        <p>профиль</p>
+      </div>
+
+      <div class="content">
+        <div class="up-bar">
+          <p>hi</p>
+        </div>
+
+        <div class="app">
+          <div class="boards">
+            <div class="boards__item" draggable="true">
+              <span contenteditable="true" class="title">Введите название</span>
+              <div class="list">
+                <div class="list__item" draggable="true">
+                  Стартовая карточка
+                </div>
+              </div>
+
+              <div class="form">
+                <textarea
+                  class="textarea"
+                  placeholder="Введите название для этой карточки"
+                ></textarea>
+
+                <div class="buttons">
+                  <button class="add__item-btn">Добавить карточку</button>
+                  <button class="cancel__item-btn">Отмена</button>
+                </div>
+              </div>
+
+              <div class="add__btn"><span>+</span> Добавить карточку</div>
+            </div>
+          </div>
+
+          <div class="button">Добавить доску</div>
+        </div>
+      </div>
+    </div>
+    <script src="to_do-act.js" type="module"></script>
+  </body>
+</html>
