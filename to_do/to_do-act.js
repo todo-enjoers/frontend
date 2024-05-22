@@ -38,7 +38,6 @@ function addTask() {
     newItem.draggable = true;
     newItem.textContent = value;
     lists[0].append(newItem);
-
     textarea.value = "";
     value = "";
     form.style.display = "none";

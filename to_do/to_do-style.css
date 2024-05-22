@@ -20,17 +20,21 @@
 .up-bar {
   height: 50px;
   border-bottom: solid #8cbcff;
-  background-color: #afd0ff;
+  background-color: #accfff;
 }
 
-.side-bar {
+.logout-wrap {
   display: flex;
-  width: 150px;
-  flex-direction: column;
-  padding-left: 15px;
-  padding-top: 10px;
-  border-right: solid #8cbcff;
-  background-color: #afd0ff;
+  justify-content: right;
+  padding: 14px 30px;
+}
+
+.logout {
+  cursor: pointer;
+  text-decoration: none;
+  color: #236180;
+  font-weight: 500;
+  font-size: 17px;
 }
 
 .content {
@@ -43,7 +47,7 @@
   flex-direction: column;
   width: 100%;
   height: calc(100vh - 50px);
-  padding: 50px 0;
+  padding: 30px 0;
 }
 
 .boards {
@@ -55,24 +59,25 @@
   display: flex;
   flex-direction: column;
   align-self: baseline;
-  max-width: 280px;
+  max-width: 300px;
   width: 100%;
-  background-color: #afd0ff77;
+  background-color: #c8dfff;
   margin: 0 15px;
   padding: 10px;
   transition: 0.3 all ease;
-  border-radius: 3px;
+  border-radius: 10px;
 }
 
 .title {
   width: 100%;
-  padding: 5px;
+  text-align: center;
   color: #1b4a61;
   font-weight: 500;
+  padding: 5px 0;
 }
 
 .title:focus {
-  outline: 1px solid rgba(168, 168, 168, 0.45);
+  outline: 2px solid #62a2fc77;
 }
 
 .list {
@@ -82,7 +87,7 @@
 .list__item {
   word-break: break-all;
   background-color: #fefefe;
-  border-radius: 3px;
+  border-radius: 7px;
   padding: 10px;
   text-align: center;
   margin: 4px 0;
@@ -90,10 +95,11 @@
   font-size: 14px;
   outline: none;
   border: none;
+  font-weight: 400;
 }
 
 .form {
-  border-radius: 3px;
+  border-radius: 10px;
   margin-top: auto;
   display: none;
 }
@@ -101,7 +107,7 @@
 .textarea {
   resize: none;
   height: 60px;
-  border-radius: 3px;
+  border-radius: 7px;
   border: none;
   background: white;
   padding: 10px;
@@ -121,7 +127,7 @@
   height: 40px;
   cursor: pointer;
   color: white;
-  border-radius: 3px;
+  border-radius: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,7 +143,7 @@
   height: 40px;
   cursor: pointer;
   color: white;
-  border-radius: 3px;
+  border-radius: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,7 +155,7 @@
 .add__btn {
   height: 30px;
   background: #2d7aa088;
-  border-radius: 3px;
+  border-radius: 7px;
   margin-top: 5px;
   display: flex;
   font-size: 12px;
@@ -163,6 +169,7 @@ span {
   font-size: 20px;
   margin-right: 10px;
   color: white;
+  font-weight: 500;
 }
 
 .button {
@@ -179,6 +186,7 @@ span {
   left: 50%;
   transform: translate(-50%);
   color: white;
-  border-radius: 3px;
-  font-size: 14px;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 400;
 }
