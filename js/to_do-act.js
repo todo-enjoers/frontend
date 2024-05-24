@@ -59,12 +59,12 @@ function addBoard() {
     `;
   boards.append(board);
 
-  changeTitle();
-  dragNdrop();
-
   board.addEventListener("dblclick", () => {
     board.remove();
   });
+
+  changeTitle();
+  dragNdrop();
 }
 button.addEventListener("click", addBoard);
 

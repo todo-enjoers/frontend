@@ -16,38 +16,50 @@
   height: 100vh;
 }
 
-.up-bar {
-  height: 50px;
-  border-bottom: solid #8cbcff;
+.panel {
+  display: flex;
+  margin: 15px 15px 10px;
+}
+
+.panel-btn {
   background-color: #1b4a61;
+  color: #fefefe;
+  border: none;
+  border-radius: 5px;
+}
+
+.offcanvas.offcanvas-start {
+  background-color: #1b4a61;
+  width: 200px;
+  color: #fefefe;
 }
 
 .logout-wrap {
   display: flex;
-  justify-content: right;
-  padding: 14px 30px;
+  bottom: 0;
+  padding: 14px 16px;
 }
 
 .logout {
   cursor: pointer;
   text-decoration: none;
-  color: #236180;
+  color: #91daff;
   font-weight: 500;
   font-size: 17px;
 }
 
 .content {
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
-    url(../img/background.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url(../img/todoback3.jpg);
 }
 
 .app {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: calc(100vh - 50px);
-  padding: 30px 0;
+  height: calc(100vh - 65px);
+  padding: 20px 0;
 }
 
 .boards {
@@ -61,7 +73,7 @@
   align-self: baseline;
   max-width: 300px;
   width: 100%;
-  background-color: #c8dfff;
+  background-color: #1b4a61;
   margin: 0 15px;
   padding: 10px;
   transition: 0.3 all ease;
@@ -71,7 +83,7 @@
 .title {
   width: 100%;
   text-align: center;
-  color: #1b4a61;
+  color: #fefefe;
   font-weight: 500;
   padding: 5px 0;
 }
@@ -92,10 +104,10 @@
   text-align: center;
   margin: 4px 0;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 15px;
   outline: none;
   border: none;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 .form {
@@ -111,6 +123,7 @@
   border: none;
   background: white;
   padding: 10px;
+  margin: 5px 0 6px;
   width: 100%;
 }
 
@@ -123,7 +136,7 @@
 }
 
 .add__item-btn {
-  background: #1b4a61;
+  background: #2d79a0;
   height: 40px;
   cursor: pointer;
   color: white;
@@ -138,7 +151,7 @@
 
 .cancel__item-btn {
   padding: 0 10px;
-  background: #2d79a0;
+  background: #3f6070;
   border: none;
   height: 40px;
   cursor: pointer;
@@ -158,7 +171,8 @@
   border-radius: 7px;
   margin-top: 5px;
   display: flex;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 400;
   align-items: center;
   padding-left: 10px;
   color: white;
@@ -177,7 +191,7 @@ span {
   height: 35px;
   justify-content: center;
   align-items: center;
-  background: #236180;
+  background: #1b4a61;
   border: none;
   width: 150px;
   cursor: pointer;
