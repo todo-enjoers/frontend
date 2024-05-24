@@ -3,7 +3,6 @@
   box-sizing: border-box;
   margin: 0;
   font-size: 100%;
-  font-weight: normal;
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
 }
@@ -20,7 +19,7 @@
 .up-bar {
   height: 50px;
   border-bottom: solid #8cbcff;
-  background-color: #accfff;
+  background-color: #1b4a61;
 }
 
 .logout-wrap {
@@ -39,7 +38,8 @@
 
 .content {
   width: 100%;
-  background-color: #e7f0fd;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
+    url(../img/background.jpg);
 }
 
 .app {
