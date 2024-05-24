@@ -16,28 +16,14 @@
   height: 100vh;
 }
 
-.panel {
+.projects {
   display: flex;
-  margin: 15px 15px 10px;
-}
-
-.panel-btn {
-  background-color: #1b4a61;
-  color: #fefefe;
-  border: none;
-  border-radius: 5px;
-}
-
-.offcanvas.offcanvas-start {
-  background-color: #1b4a61;
-  width: 200px;
-  color: #fefefe;
+  flex-direction: column;
+  padding: 10px 15px;
 }
 
 .logout-wrap {
-  display: flex;
-  bottom: 0;
-  padding: 14px 16px;
+  padding: 10px 15px;
 }
 
 .logout {
@@ -54,6 +40,7 @@
     url(../img/todoback3.jpg);
 }
 
+/*
 .app {
   display: flex;
   flex-direction: column;
@@ -185,8 +172,9 @@ span {
   color: white;
   font-weight: 500;
 }
+*/
 
-.button {
+.addproject-button {
   display: flex;
   height: 35px;
   justify-content: center;
@@ -203,4 +191,15 @@ span {
   border-radius: 7px;
   font-size: 15px;
   font-weight: 400;
+}
+
+.addproject-button:hover {
+  background: #143647;
+}
+
+.proj-link {
+  text-decoration: none;
+  color: #91daff;
+  font-weight: 500;
+  cursor: pointer;
 }
