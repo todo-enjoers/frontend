@@ -10,16 +10,16 @@ function firstBoard() {
   <div class="list"></div>
 
   <div class="form">
-    <textarea class="textarea" placeholder="Введите название для карточки"
+    <textarea class="textarea" placeholder="Введите название задачи"
     ></textarea>
 
     <div class="buttons">
-      <button class="add__item-btn">Добавить карточку</button>
+      <button class="add__item-btn">Добавить задачу</button>
       <button class="cancel__item-btn">Отмена</button>
     </div>
   </div>
 
-  <div class="add__btn"><span>+</span> Добавить карточку</div>`;
+  <div class="add__btn"><span>+</span> Добавить задачу</div>`;
   boards.append(board);
 
   addTask();

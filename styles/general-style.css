@@ -8,7 +8,7 @@
 }
 
 .body {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
     url(../img/background.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -85,7 +85,8 @@
 
 .password-wrapper {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .password-button {
@@ -98,6 +99,10 @@
 
 .password-icon {
   cursor: pointer;
+}
+
+#password {
+  margin-bottom: 10px;
 }
 
 .submit-button {

@@ -23,7 +23,19 @@
 }
 
 .logout-wrap {
+  display: flex;
+  flex-direction: column;
   padding: 10px 15px;
+  position: absolute;
+  margin-top: 830px;
+}
+
+.password-change {
+  cursor: pointer;
+  text-decoration: none;
+  color: #91daff;
+  font-weight: 500;
+  font-size: 17px;
 }
 
 .logout {
@@ -217,7 +229,7 @@ span {
 .main {
   cursor: pointer;
   text-decoration: none;
-  color:#91daff;
+  color: #91daff;
   font-weight: 500;
   font-size: 20px;
 }
