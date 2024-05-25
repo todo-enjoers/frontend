@@ -1,5 +1,37 @@
-const lists = document.querySelectorAll(".list");
-const button = document.querySelector(".button");
+const button = document.getElementById("btn-proj");
+const first = document.querySelector(".first");
+
+function firstBoard() {
+  const boards = document.querySelector(".boards");
+  const board = document.createElement("div");
+  board.classList.add("firstBoard");
+  board.innerHTML = `
+  <span contenteditable="true" class="title">Несортированные задачи</span>
+  <div class="list"></div>
+
+  <div class="form">
+    <textarea class="textarea" placeholder="Введите название для карточки"
+    ></textarea>
+
+    <div class="buttons">
+      <button class="add__item-btn">Добавить карточку</button>
+      <button class="cancel__item-btn">Отмена</button>
+    </div>
+  </div>
+
+  <div class="add__btn"><span>+</span> Добавить карточку</div>`;
+  boards.append(board);
+
+  addTask();
+  changeTitle();
+  dragNdrop();
+}
+
+first.addEventListener("click", () => {
+  firstBoard();
+  first.style.display = "none";
+  button.style.display = "flex";
+});
 
 function addTask() {
   const btn = document.querySelector(".add__btn");
@@ -33,6 +65,7 @@ function addTask() {
   });
 
   addBtn.addEventListener("click", () => {
+    const lists = document.querySelectorAll(".list");
     const newItem = document.createElement("div");
     newItem.classList.add("list__item");
     newItem.draggable = true;
@@ -47,26 +80,25 @@ function addTask() {
   });
 }
 
-addTask();
-
-function addBoard() {
+function addBoards() {
   const boards = document.querySelector(".boards");
   const board = document.createElement("div");
   board.classList.add("boards__item");
   board.innerHTML = `
-    <span contenteditable="true" class="title">Введите название</span>
+    <span contenteditable="true" class="title">Без названия</span>
     <div class="list"></div>
     `;
   boards.append(board);
 
-  board.addEventListener("dblclick", () => {
+  board.addEventListener("contextmenu", () => {
+    event.preventDefault()
     board.remove();
   });
 
   changeTitle();
   dragNdrop();
 }
-button.addEventListener("click", addBoard);
+button.addEventListener("click", addBoards);
 
 function changeTitle() {
   const titles = document.querySelectorAll(".title");
