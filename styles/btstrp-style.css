@@ -40,14 +40,13 @@
   resize: none;
 }
 
-.btn-primary,
-.btn-primary:hover {
-  background: #2d79a0;
-  border: none;
-}
-
 .btn-secondary,
 .btn-secondary:hover {
   background: #143647;
+  border: none;
+}
+
+#btn-proj {
+  background: #276a8b;
   border: none;
 }

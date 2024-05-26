@@ -1,49 +1,84 @@
-const button = document.getElementById("btn-proj");
-//const first = document.querySelector(".first");
+const button = document.getElementById("btn-create");
 
 function addBoards() {
   const boards = document.querySelector(".boards");
   const board = document.createElement("div");
   board.classList.add("boards__item");
+  var textarea = document.getElementById("message-text").value;
   board.innerHTML = `
-  <span contenteditable="true" class="title">Без названия</span>
+  <span contenteditable="true" class="title">${textarea}</span><span class="del_board">✕</span>
+
   <div class="list"></div>
-
-  <div class="form">
-    <textarea class="textarea" placeholder="Введите название задачи"
-    ></textarea>
-
-    <div class="buttons">
-      <button class="add__item-btn">Добавить задачу</button>
-      <button class="cancel__item-btn">Отмена</button>
-    </div>
-  </div>
-
-  <div class="add__btn"><span>+</span> Добавить задачу</div>
   
-        
-  `;
+  <div class="add__btn"><span>+</span> Добавить задачу<div>`;
   boards.append(board);
 
-  board.addEventListener("contextmenu", () => {
-    event.preventDefault();
-    board.remove();
-  });
-
+  delBoard();
   //addTask();
-  changeTitle();
-  //dragNdrop();
 }
-button.addEventListener("click", addBoards);
 
-function changeTitle() {
-  const titles = document.querySelectorAll(".title");
+button.addEventListener("click", () => {
+  addBoards();
+  var textarea = document.getElementById("message-text");
+  textarea.value = "";
+  value = "";
+});
 
-  titles.forEach((title) => {
-    title.addEventListener("click", (e) => (e.target.textContent = ""));
-  });
+function delBoard() {
+  var delboards = document.querySelectorAll(".del_board");
+  var boards = document.querySelectorAll(".boards__item");
+
+  for (i = 0; i < boards.length; i++) {
+    const board = boards[i];
+    const delboard = delboards[i];
+
+    delboard.addEventListener("click", () => {
+      board.remove();
+    });
+  }
 }
-changeTitle();
+
+// function addTask() {
+//   const btn = document.querySelectorAll("add__btn");
+
+//   btn.addEventListener("click", () => {
+//     const board = document.querySelectorAll("boards__item");
+//   });
+// }
+
+// textarea.addEventListener("input", (e) => {
+//   const namearea = document.querySelector(".title");
+//   value = e.target.value;
+//   namearea.textContent = value;
+// });
+
+// const namearea = document.querySelector(".title");
+// const textarea = document.getElementById("message-text");
+// textarea.on("change", (e) => {
+//   value = e.target.value;
+//   namearea = value;
+// });
+
+// let value;
+
+// function addTask {
+//   const btn = document.querySelectorAll(".add__btn")
+//   const addBtn = document.querySelectorAll(".add__item-btn");
+//   const cancelBtn = document.querySelectorAll(".cancel__item-btn");
+//   const textarea = document.querySelectorAll(".textarea");
+//   const form = document.querySelectorAll(".form");
+// };
+
+// const textarea = document.getElementById("message-text").value;
+
+// function changeTitle() {
+//   const titles = document.querySelectorAll(".title");
+
+//   titles.forEach((title) => {
+//     title.addEventListener("click", (e) => (e.target.textContent = ""));
+//   });
+// }
+// changeTitle();
 
 /*
 first.addEventListener("click", () => {
@@ -53,52 +88,58 @@ first.addEventListener("click", () => {
 });
 */
 
-/*
-function addTask() {
-  const btn = document.querySelectorAll(".add__btn");
-  const addBtn = document.querySelectorAll(".add__item-btn");
-  const cancelBtn = document.querySelectorAll(".cancel__item-btn");
-  const textarea = document.querySelectorAll(".textarea");
-  const form = document.querySelectorAll(".form");
+//addTask();
+//changeTitle();
+//dragNdrop();
 
-  let value;
+// //const first = document.querySelector(".first");
 
-  btn.addEventListener("click", () => {
-    form.style.display = "block";
-    btn.style.display = "none";
-    addBtn.style.display = "none";
+// function addTask() {
+//   const btn = document.querySelectorAll(".add__btn");
+//   const board = document.querySelectorAll(".boards__item");
+//   const addBtn = document.querySelectorAll(".add__item-btn");
+//   const cancelBtn = document.querySelectorAll(".cancel__item-btn");
+//   const textarea = document.querySelectorAll(".textarea");
+//   const form = document.querySelectorAll(".form");
 
-    textarea.addEventListener("input", (e) => {
-      value = e.target.value;
-      if (value) {
-        addBtn.style.display = "block";
-      } else {
-        addBtn.style.display = "none";
-      }
-    });
-  });
+//   for (a = 0; a < board.length; a++) {
+//     btn[a].addEventListener("click", () => {
+//       form[a].style.display = "block";
+//       btn[a].style.display = "none";
+//       addBtn[a].style.display = "none";
 
-  cancelBtn.addEventListener("click", () => {
-    textarea.value = "";
-    value = "";
-    form.style.display = "none";
-    btn.style.display = "flex";
-  });
+//       textarea[a].addEventListener("input", (e) => {
+//         value = e.target.value;
+//         if (value) {
+//           addBtn[a].style.display = "block";
+//         } else {
+//           addBtn[a].style.display = "none";
+//         }
+//       });
+//     });
 
-  addBtn.addEventListener("click", () => {
-    const lists = document.querySelectorAll(".list");
-    const newItem = document.createElement("div");
-    newItem.classList.add("list__item");
-    newItem.textContent = value;
-    lists.append(newItem);
-    textarea.value = "";
-    value = "";
-    form.style.display = "none";
-    btn.style.display = "flex";
+//     cancelBtn[a].addEventListener("click", () => {
+//       textarea[a].value = "";
+//       value[a] = "";
+//       form[a].style.display = "none";
+//       btn[a].style.display = "flex";
+//     });
 
-    //dragNdrop();
-  });
-}*/
+//     addBtn[a].addEventListener("click", () => {
+//       const lists = document.querySelectorAll(".list");
+//       for (b = 0; b < lists.length; b++) {
+//         const newItem = document.createElement("div");
+//         newItem.classList.add("list__item");
+//         newItem.textContent = value;
+//         lists.append(newItem);
+//         textarea.value = "";
+//         value = "";
+//         form.style.display = "none";
+//         btn.style.display = "flex";
+//       }
+//     });
+//   }
+// }
 
 /*
 function addBoards() {
