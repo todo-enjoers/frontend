@@ -214,11 +214,11 @@ span {
   color: #91daff;
   font-weight: 500;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .proj-link:focus {
-  outline: 1px solid #91daff;
-  border-radius: 4px;
+  outline: 2px solid #91daff;
 }
 
 #menu {

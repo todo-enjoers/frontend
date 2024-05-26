@@ -21,7 +21,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../styles/to_do-style.css" />
-    <link rel="stylesheet" href="../styles/btstrp-style.css">
+    <link rel="stylesheet" href="../styles/btstrp-style.css" />
   </head>
   <body class="body">
     <div class="layout">
@@ -58,21 +58,21 @@
           </div>
 
           <div class="main-wrap">
-            <a href="to_do.html" class="main">
-              Главная
-            </a>
+            <a href="to_do.html" class="main"> Главная </a>
           </div>
 
           <div class="projects">
             <h5 class="projects-title">Проекты</h5>
-            <menu style="list-style-type: none; padding: 10px;" id="menu">
-              <!-- <span conenteditable="true" onclick="document.location='todo_projects.html'" class="proj-link">Первый проект</span>
+            <menu style="list-style-type: none; padding: 10px" id="menu">
+              <!-- <span conenteditable="true" ondblclick="document.location='todo_projects.html'" class="proj-link">Первый проект</span>
               <button class="del-project">Удалить</button> -->
             </menu>
           </div>
 
           <div class="logout-wrap">
-            <a href="change-password.html" class="password-change">Сменить пароль</a>
+            <a href="change-password.html" class="password-change"
+              >Сменить пароль</a
+            >
             <a class="logout" href="entry.html">Выйти</a>
           </div>
         </div>
@@ -108,9 +108,7 @@
               <div class="modal-body">
                 <form>
                   <div class="mb-3">
-                    <label class="col-form-label"
-                      >Название проекта</label
-                    >
+                    <label class="col-form-label">Название проекта</label>
                     <textarea class="form-control" id="project-text"></textarea>
                   </div>
                 </form>
@@ -129,14 +127,13 @@
               </div>
             </div>
           </div>
-          
-          
+
           <!--
           <div class="addproject-button" id="btn-proj">Новый проект</div>
           -->
         </div>
       </div>
-    </div>    
+    </div>
     <script src="../js/projects.js"></script>
     <!--
     <script src="../js/boards.js" type="module"></script>

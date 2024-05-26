@@ -29,7 +29,7 @@ function createProject() {
   });
 
   function renameProject() {
-    const name = project;
+    const name = document.querySelectorAll('.proj-link');
 
     name.forEach((title) => {
       title.addEventListener("click", (e) => (e.target.textContent = ""));

@@ -21,6 +21,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../styles/projects-style.css" />
+    <!-- <link rel="stylesheet" href="../styles/to_do-style.css"> -->
     <link rel="stylesheet" href="../styles/btstrp-style.css" />
   </head>
   <body class="body">
@@ -64,7 +65,7 @@
           <div class="projects">
             <h5 class="projects-title">Проекты</h5>
             <menu style="list-style-type: none; padding: 10px" id="menu">
-              <a href="todo_projects.html" class="proj-link">1</a>
+              <!-- <span conenteditable="true" onclick="document.location='todo_projects.html'" class="proj-link">Первый проект</span> -->
             </menu>
           </div>
 
@@ -76,9 +77,10 @@
 
         <div class="app">
           <div class="boards">
-            <div class="first-btn">
+            <!-- <div class="first-btn">
                 <button class="first">Добавить доску 1</button>
-            </div>
+            </div> -->
+
             <!--
             <div class="boards__item">
               <span contenteditable="true" class="title">Несортированные задачи</span>
@@ -104,10 +106,65 @@
             </div>
           </div>
           -->
+          <!-- <button
+          type="button"
+          class="btn btn-primary addproject-button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Добавить задачу
+        </button> -->
 
-          <div class="button" id="btn-proj" style="display:none;">Добавить доску</div>
-        </div>
+        <!-- <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Создание проекта
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label class="col-form-label"
+                      >Название проекта</label
+                    >
+                    <textarea class="form-control" id="project-text"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Закрыть
+                </button>
+                <button type="button" class="btn btn-primary" id="btn-proj">
+                  Создать проект
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="addproject-button" id="btn-proj">Новый проект</div>
+        </div> -->
+
       </div>
+      <div class="button" id="btn-proj">Добавить доску</div>
+        </div>
     </div>
     <script src="../js/boards.js" type="module"></script>
     <script

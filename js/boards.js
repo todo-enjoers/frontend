@@ -1,12 +1,12 @@
 const button = document.getElementById("btn-proj");
-const first = document.querySelector(".first");
+//const first = document.querySelector(".first");
 
-function firstBoard() {
+function addBoards() {
   const boards = document.querySelector(".boards");
   const board = document.createElement("div");
-  board.classList.add("firstBoard");
+  board.classList.add("boards__item");
   board.innerHTML = `
-  <span contenteditable="true" class="title">Несортированные задачи</span>
+  <span contenteditable="true" class="title">Без названия</span>
   <div class="list"></div>
 
   <div class="form">
@@ -19,26 +19,47 @@ function firstBoard() {
     </div>
   </div>
 
-  <div class="add__btn"><span>+</span> Добавить задачу</div>`;
+  <div class="add__btn"><span>+</span> Добавить задачу</div>
+  
+        
+  `;
   boards.append(board);
 
-  addTask();
+  board.addEventListener("contextmenu", () => {
+    event.preventDefault();
+    board.remove();
+  });
+
+  //addTask();
   changeTitle();
   //dragNdrop();
 }
+button.addEventListener("click", addBoards);
 
+function changeTitle() {
+  const titles = document.querySelectorAll(".title");
+
+  titles.forEach((title) => {
+    title.addEventListener("click", (e) => (e.target.textContent = ""));
+  });
+}
+changeTitle();
+
+/*
 first.addEventListener("click", () => {
   firstBoard();
   first.style.display = "none";
   button.style.display = "flex";
 });
+*/
 
+/*
 function addTask() {
-  const btn = document.querySelector(".add__btn");
-  const addBtn = document.querySelector(".add__item-btn");
-  const cancelBtn = document.querySelector(".cancel__item-btn");
-  const textarea = document.querySelector(".textarea");
-  const form = document.querySelector(".form");
+  const btn = document.querySelectorAll(".add__btn");
+  const addBtn = document.querySelectorAll(".add__item-btn");
+  const cancelBtn = document.querySelectorAll(".cancel__item-btn");
+  const textarea = document.querySelectorAll(".textarea");
+  const form = document.querySelectorAll(".form");
 
   let value;
 
@@ -69,7 +90,7 @@ function addTask() {
     const newItem = document.createElement("div");
     newItem.classList.add("list__item");
     newItem.textContent = value;
-    lists[0].append(newItem);
+    lists.append(newItem);
     textarea.value = "";
     value = "";
     form.style.display = "none";
@@ -77,8 +98,9 @@ function addTask() {
 
     //dragNdrop();
   });
-}
+}*/
 
+/*
 function addBoards() {
   const boards = document.querySelector(".boards");
   const board = document.createElement("div");
@@ -89,24 +111,11 @@ function addBoards() {
     `;
   boards.append(board);
 
-  board.addEventListener("contextmenu", () => {
-    event.preventDefault()
-    board.remove();
-  });
-
   changeTitle();
   //dragNdrop();
 }
 button.addEventListener("click", addBoards);
-
-function changeTitle() {
-  const titles = document.querySelectorAll(".title");
-
-  titles.forEach((title) => {
-    title.addEventListener("click", (e) => (e.target.textContent = ""));
-  });
-}
-changeTitle();
+*/
 
 //let draggedItem = null;
 
