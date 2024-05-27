@@ -1,4 +1,5 @@
 const button = document.getElementById("btn-create");
+const btn = document.getElementById("add_task");
 
 function addBoards() {
   const boards = document.querySelector(".boards");
@@ -15,7 +16,8 @@ function addBoards() {
       type="button"
       class="btn btn-primary btn-tasks"
       data-bs-toggle="modal"
-      data-bs-target="#myModal">Новая задача</button>
+      data-bs-target="#myModal"
+      >Новая задача</button>
   <div>`;
   boards.append(board);
 
@@ -26,7 +28,6 @@ button.addEventListener("click", () => {
   addBoards();
   var textarea = document.getElementById("message-text");
   textarea.value = "";
-  value = "";
 });
 
 function delBoard() {
@@ -44,57 +45,68 @@ function delBoard() {
 }
 
 function addTask() {
-  const btn = document.getElementById("add_task");
-  const btn = document.querySelectorAll(".add__btn");
-  const board = document.querySelectorAll(".boards__item");
-  const addBtn = document.querySelectorAll(".add__item-btn");
-  const cancelBtn = document.querySelectorAll(".cancel__item-btn");
-  const textarea = document.querySelectorAll(".textarea");
-  const form = document.querySelectorAll(".form");
+  // const cancelBtn = document.getElementById("close-btn");
+  var lists = document.querySelectorAll(".list");
 
-  for (a = 0; a < board.length; a++) {
-    btn[a].addEventListener("click", () => {
-      form[a].style.display = "block";
-      btn[a].style.display = "none";
-      addBtn[a].style.display = "none";
+  var name = document.querySelector(".task-name").value;
+  var form = document.querySelector(".task-description").value;
 
-      textarea[a].addEventListener("input", (e) => {
-        value = e.target.value;
-        if (value) {
-          addBtn[a].style.display = "block";
-        } else {
-          addBtn[a].style.display = "none";
-        }
-      });
-    });
-
-    cancelBtn[a].addEventListener("click", () => {
-      textarea[a].value = "";
-      value[a] = "";
-      form[a].style.display = "none";
-      btn[a].style.display = "flex";
-    });
-
-    addBtn[a].addEventListener("click", () => {
-      const lists = document.querySelectorAll(".list");
-      for (b = 0; b < lists.length; b++) {
-        const newItem = document.createElement("div");
-        newItem.classList.add("list__item");
-        newItem.textContent = value;
-        lists.append(newItem);
-        textarea.value = "";
-        value = "";
-        form.style.display = "none";
-        btn.style.display = "flex";
-      }
-    });
-  }
-
-  // btn.addEventListener("click", () => {
-  //   event.preventDefault();
-
-  // });
+  const list = document.createElement("div");
+  list.classList.add("list__item");
+  list.innerHTML = `<span data-bs-target="#taskModal">${name}</span>`;
+  lists.appendChild(list);
 }
+
+btn.addEventListener("click", () => {
+  addTask();
+  var textarea = document.querySelector(".task-name");
+  textarea.value = "";
+});
+
+// function addbtn() {
+//   addBtn.addEventListener("click", () => {
+//     var lists = document.querySelectorAll(".list");
+//     const list = lists[a];
+//       const newItem = document.createElement("div");
+//       newItem.classList.add("list__item");
+//       newItem.textContent = value;
+//       lists.append(newItem);
+//       textarea.value = "";
+//       value = "";
+//       form.style.display = "none";
+//       btn.style.display = "flex";
+//     });
+
+// for (a = 0; a < board.length; a++) {
+//   btn[a].addEventListener("click", () => {
+//     form[a].style.display = "block";
+//     btn[a].style.display = "none";
+//     addBtn[a].style.display = "none";
+
+//     textarea[a].addEventListener("input", (e) => {
+//       value = e.target.value;
+//       if (value) {
+//         addBtn[a].style.display = "block";
+//       } else {
+//         addBtn[a].style.display = "none";
+//       }
+//     });
+//   });
+
+//   cancelBtn[a].addEventListener("click", () => {
+//     textarea[a].value = "";
+//     value[a] = "";
+//     form[a].style.display = "none";
+//     btn[a].style.display = "flex";
+//   });
+
+//
+//   });
+
+// btn.addEventListener("click", () => {
+//   event.preventDefault();
+
+// });
 
 // function addTask() {
 //   const btn = document.querySelectorAll("add__btn");
