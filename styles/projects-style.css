@@ -79,7 +79,7 @@
 }
 
 .title {
-  width: 100%;
+  width: 250px;
   text-align: center;
   color: #fefefe;
   font-weight: 500;
@@ -165,26 +165,30 @@
   flex-shrink: 0;
 }
 */
+
 .add__btn {
   height: 30px;
-  background: #2d7aa088;
   border-radius: 7px;
   margin-top: 5px;
   display: flex;
+  justify-content: right;
   font-size: 14px;
   font-weight: 400;
   align-items: center;
   padding-left: 10px;
-  color: white;
-  cursor: pointer;
 }
 
-span {
+.btn-tasks {
+  background-color: #6192aa;
+  border: none;
+}
+
+/* span {
   font-size: 20px;
   margin-right: 10px;
   color: white;
   font-weight: 500;
-}
+} */
 /*
 .button {
   display: flex;
@@ -241,10 +245,11 @@ span {
 }
 
 .del_board {
+  width: 16px;
   cursor: pointer;
   position: relative;
   left: 255px;
-  bottom: 35px;
+  bottom: 30px;
   margin: 0;
   color: #fefefe;
   font-weight: 600;
@@ -276,8 +281,40 @@ span {
   font-size: 20px;
 }
 
-.pop-up {
+.tasks {
   display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  width: 466px;
+}
+
+.task-name {
+  height: 30px;
+}
+
+.text {
+  outline: none;
+  border-radius: 5px;
+  resize: none;
+  margin-bottom: 10px;
+  width: 466px;
+}
+
+#add_task {
+  background-color: #2d79a0;
+  border: none;
+}
+
+.btn-tasks:hover {
+  background-color: #2d79a0;
+}
+
+/* .modal-all {
+  display: flex;
+  flex-direction: column;
+  color: #fefefe;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -287,19 +324,22 @@ span {
   z-index: 2;
 }
 
-.pop-up-body {
-  display: flex;
-  flex-direction: column;
+.modal-header {
+  background: #1b4a61;
+  color: #fefefe;
+  width: 500px;
+  left: 50%;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 16px;
+}
+
+.modal-body {
   width: 500px;
   height: 300px;
   background-color: #1b4a61;
   border-radius: 10px;
-  padding: 100px 15px 110px 15px;
-  position: fixed;
-  top: 30px;
-  left: 50%;
-  transform: translate(-50%);
-}
+} */
 
 /* .pop-up-body {
   top: 20px;
@@ -307,6 +347,11 @@ span {
   font-size: 20px;
   font-weight: 500;
 } */
+
+/* .form-name {
+  display: flex;
+  flex-direction: column;
+}
 
 .popup-form {
   display: flex;
@@ -316,8 +361,7 @@ span {
 
 .pop-up-close {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: right;
 }
 
 .name {
@@ -325,9 +369,19 @@ span {
   margin-top: 20px;
 }
 
+.task-name {
+  height: 50%;
+  padding: 16px;
+}
+
+.task-description {
+  padding: 16px;
+}
+
 #first {
-  margin-top: 40px;
+  margin-top: 20px;
   height: 30px;
+  width: 100%;
 }
 
 #second {
@@ -335,4 +389,4 @@ span {
   width: 466px;
   height: 62px;
   border-radius: 8px;
-}
+} */

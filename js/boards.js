@@ -10,7 +10,13 @@ function addBoards() {
 
   <div class="list"></div>
   
-  <div class="add__btn"><span>+</span> Добавить задачу<div>`;
+  <div class="add__btn">
+    <button
+      type="button"
+      class="btn btn-primary btn-tasks"
+      data-bs-toggle="modal"
+      data-bs-target="#myModal">Новая задача</button>
+  <div>`;
   boards.append(board);
 
   delBoard();
@@ -38,11 +44,56 @@ function delBoard() {
 }
 
 function addTask() {
-  const btn = document.querySelectorAll("add__btn");
+  const btn = document.getElementById("add_task");
+  const btn = document.querySelectorAll(".add__btn");
+  const board = document.querySelectorAll(".boards__item");
+  const addBtn = document.querySelectorAll(".add__item-btn");
+  const cancelBtn = document.querySelectorAll(".cancel__item-btn");
+  const textarea = document.querySelectorAll(".textarea");
+  const form = document.querySelectorAll(".form");
 
-  btn.addEventListener("click", () => {
+  for (a = 0; a < board.length; a++) {
+    btn[a].addEventListener("click", () => {
+      form[a].style.display = "block";
+      btn[a].style.display = "none";
+      addBtn[a].style.display = "none";
 
-  })
+      textarea[a].addEventListener("input", (e) => {
+        value = e.target.value;
+        if (value) {
+          addBtn[a].style.display = "block";
+        } else {
+          addBtn[a].style.display = "none";
+        }
+      });
+    });
+
+    cancelBtn[a].addEventListener("click", () => {
+      textarea[a].value = "";
+      value[a] = "";
+      form[a].style.display = "none";
+      btn[a].style.display = "flex";
+    });
+
+    addBtn[a].addEventListener("click", () => {
+      const lists = document.querySelectorAll(".list");
+      for (b = 0; b < lists.length; b++) {
+        const newItem = document.createElement("div");
+        newItem.classList.add("list__item");
+        newItem.textContent = value;
+        lists.append(newItem);
+        textarea.value = "";
+        value = "";
+        form.style.display = "none";
+        btn.style.display = "flex";
+      }
+    });
+  }
+
+  // btn.addEventListener("click", () => {
+  //   event.preventDefault();
+
+  // });
 }
 
 // function addTask() {
@@ -52,21 +103,6 @@ function addTask() {
 //     const board = document.querySelectorAll("boards__item");
 //   });
 // }
-
-// textarea.addEventListener("input", (e) => {
-//   const namearea = document.querySelector(".title");
-//   value = e.target.value;
-//   namearea.textContent = value;
-// });
-
-// const namearea = document.querySelector(".title");
-// const textarea = document.getElementById("message-text");
-// textarea.on("change", (e) => {
-//   value = e.target.value;
-//   namearea = value;
-// });
-
-// let value;
 
 // function addTask {
 //   const btn = document.querySelectorAll(".add__btn")
@@ -86,20 +122,6 @@ function addTask() {
 //   });
 // }
 // changeTitle();
-
-/*
-first.addEventListener("click", () => {
-  firstBoard();
-  first.style.display = "none";
-  button.style.display = "flex";
-});
-*/
-
-//addTask();
-//changeTitle();
-//dragNdrop();
-
-// //const first = document.querySelector(".first");
 
 // function addTask() {
 //   const btn = document.querySelectorAll(".add__btn");
