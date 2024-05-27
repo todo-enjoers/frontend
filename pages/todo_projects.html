@@ -20,7 +20,6 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <!-- <link rel="stylesheet" href="../styles/to_do-style.css"> -->
     <link rel="stylesheet" href="../styles/btstrp-style.css" />
     <link rel="stylesheet" href="../styles/projects-style.css" />
   </head>
@@ -70,7 +69,9 @@
           </div>
 
           <div class="logout-wrap">
-            <a href="change-password.html" class="password-change">Сменить пароль</a>
+            <a href="change-password.html" class="password-change"
+              >Сменить пароль</a
+            >
             <a class="logout" href="entry.html">Выйти</a>
           </div>
         </div>
@@ -101,43 +102,65 @@
               <div class="add__btn"><span>+</span> Добавить карточку</div>
             </div>
           </div>
-          -->
-          <!-- <button
-          type="button"
-          class="btn btn-primary addproject-button"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-        >
-          Добавить задачу
-        </button> -->
-          </div>
+          --></div>
 
-          <button type="button" class="btn addproject-button" data-bs-toggle="modal" data-bs-target="#exampleModal">Создать доску</button>
-          
-          <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <button
+            type="button"
+            class="btn board-button"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Создать доску
+          </button>
+
+          <div
+            class="modal fade"
+            id="exampleModal"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Новая доска</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Новая доска
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
                 <div class="modal-body">
                   <form>
                     <div class="mb-3">
-                      <label for="board-text" class="col-form-label">Название доски</label>
-                      <textarea class="form-control" id="message-text"></textarea>
+                      <label for="board-text" class="col-form-label"
+                        >Название доски</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="message-text"
+                      ></textarea>
                     </div>
                   </form>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                  <button type="button" class="btn btn-create" id="btn-create">Создать доску</button>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Закрыть
+                  </button>
+                  <button type="button" class="btn btn-create" id="btn-create">
+                    Создать доску
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- <div class="button" id="btn-proj">Добавить доску</div> -->
       </div>
     </div>
     <script src="../js/boards.js"></script>

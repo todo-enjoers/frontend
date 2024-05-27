@@ -1,3 +1,5 @@
+var allprojects = [];
+
 function createProject() {
   const createBtn = document.getElementById("btn-proj");
   const projects = document.getElementById("menu");
@@ -10,12 +12,19 @@ function createProject() {
   createBtn.addEventListener("click", () => {
     const project = document.createElement("span");
     project.classList.add("proj-link");
-    project.setAttribute("ondblclick", "document.location='todo_projects.html'");
+    project.setAttribute(
+      "ondblclick",
+      "document.location='todo_projects.html'"
+    );
     project.setAttribute("contenteditable", "true");
     project.textContent = value;
     projects.appendChild(project);
     textarea.value = "";
     value = "";
+
+    allprojects.push(project.textContent);
+    localStorage.setItem("projects", JSON.stringify(allprojects));
+    // console.log(allprojects);
 
     const btn = document.createElement("button");
     btn.classList.add("del-project");
@@ -27,14 +36,20 @@ function createProject() {
       btn.remove();
     });
   });
-
-  function renameProject() {
-    const name = document.querySelectorAll('.proj-link');
-
-    name.forEach((title) => {
-      title.addEventListener("click", (e) => (e.target.textContent = ""));
-    });
-  }
   renameProject();
 }
 createProject();
+
+function renameProject() {
+  const name = document.querySelectorAll(".proj-link");
+
+  name.forEach((title) => {
+    title.addEventListener("click", (e) => (e.target.textContent = ""));
+  });
+}
+
+var projectsname = localStorage.getItem("projects");
+var items = JSON.parse(projectsname);
+console.log(items);
+
+//localStorage.clear();

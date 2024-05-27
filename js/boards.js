@@ -14,7 +14,6 @@ function addBoards() {
   boards.append(board);
 
   delBoard();
-  //addTask();
 }
 
 button.addEventListener("click", () => {
@@ -37,6 +36,7 @@ function delBoard() {
     });
   }
 }
+
 
 // function addTask() {
 //   const btn = document.querySelectorAll("add__btn");
@@ -140,23 +140,6 @@ first.addEventListener("click", () => {
 //     });
 //   }
 // }
-
-/*
-function addBoards() {
-  const boards = document.querySelector(".boards");
-  const board = document.createElement("div");
-  board.classList.add("boards__item");
-  board.innerHTML = `
-    <span contenteditable="true" class="title">Без названия</span>
-    <div class="list"></div>
-    `;
-  boards.append(board);
-
-  changeTitle();
-  //dragNdrop();
-}
-button.addEventListener("click", addBoards);
-*/
 
 //let draggedItem = null;
 
