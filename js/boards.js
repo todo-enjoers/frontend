@@ -6,7 +6,7 @@ function addBoards() {
   board.classList.add("boards__item");
   var textarea = document.getElementById("message-text").value;
   board.innerHTML = `
-  <span contenteditable="true" class="title">${textarea}</span><span class="del_board">✕</span>
+  <span contenteditable="true" class="title">${textarea}</span><span class="del_board">&#10006</span>
 
   <div class="list"></div>
   
@@ -37,6 +37,13 @@ function delBoard() {
   }
 }
 
+function addTask() {
+  const btn = document.querySelectorAll("add__btn");
+
+  btn.addEventListener("click", () => {
+
+  })
+}
 
 // function addTask() {
 //   const btn = document.querySelectorAll("add__btn");
