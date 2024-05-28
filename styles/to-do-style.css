@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+}
+
+.open-navbar {
+  position: fixed;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  left: 20px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fefefe;
+  border-radius: 5px;
+  font-size: 50px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.addproject-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 170px;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%);
+  background: #1b4a61;
+  border: none;
+  border-radius: 7px;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+}
+
+.addproject-button:hover {
+  background: #143647;
+}
+
+.app {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url(../img/todoback3.jpg);
+  width: 100%;
+  height: 100vh;
+  filter: brightness(100%);
+}

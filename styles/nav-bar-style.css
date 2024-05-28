@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 100%;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+}
+
+.body {
+  background-color: #e7f0fd;
+  height: 100vh;
+}
+
+/* The side navigation menu */
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* Stay in place */
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #1b4a61;
+  overflow-x: hidden;
+  padding-top: 17px;
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.control {
+  margin-bottom: 50px;
+  padding-left: 20px;
+  font-weight: 500;
+  font-size: 25px;
+  color: #fefefe;
+}
+
+.main-link {
+  margin-bottom: 40px;
+  padding-left: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration: none;
+  color: #91daff;
+}
+
+.all-projects {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fefefe;
+}
+
+.project-name {
+  padding-left: 10px;
+  margin-bottom: 15px;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #91daff;
+}
+
+/* The navigation menu links */
+#menu {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fefefe;
+  transition: 0.3s;
+}
+
+.closebtn {
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 10px;
+  top: 0;
+  right: 25px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #fefefe;
+}
+
+.logout-wrapper {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  left: 20px;
+  bottom: 20px;
+}
+
+.password-change,
+.logout {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #91daff;
+}

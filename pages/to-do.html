@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do</title>
+
+    <!-- Подключение шрифтов из Google fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Подключение файла с собственным стилями -->
+    <link rel="stylesheet" href="../styles/nav-bar-style.css" />
+    <link rel="stylesheet" href="../styles/to-do-style.css">
+  </head>
+  <body class="body">
+
+    <!-- Основное содержание страницы -->
+    <main class="app">
+        <button class="open-navbar" onclick="openNav()">≡</и>
+        <button class="addproject-button">Новый проект</button>
+    </main>
+
+    <!-- Панель навигации -->
+    <nav>
+        <div id="side-bar" class="nav-bar">
+            <span class="control">Управление</span>
+
+            <a href="#" class="main-link">Главная</a>
+
+            <!-- Лист с проектами -->
+            <span class="all-projects">Проекты</span>
+            <menu id="menu">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#" class="project-name">Проект 1</a>
+                <a href="#" class="project-name">Проект 1</a>
+                <a href="#" class="project-name">Проект 1</a>
+            </menu>
+
+            <!-- Ссылки для выхода из аккаунта и смены пароля -->
+            <div class="logout-wrapper">
+                <a href="change-password-page.html" class="password-change">Сменить пароль</a>
+
+                <a class="logout" href="entry-page.html">Выйти</a>
+            </div>
+        </div>
+    </nav>
+
+    <script src="../scripts/to-do-scripts.js"></script>
+  </body>
+</html>
