@@ -27,17 +27,24 @@ closeBtn.addEventListener("click", () => {
 
 // Создание доски и добавление на страницу
 const btn = document.getElementById("createBoard");
-var textarea = document.getElementById("boardName").value;
+var textarea = document.getElementById("boardNameTest");
 
 function addBoards() {
   const boards = document.querySelector(".boards");
   const board = document.createElement("div");
   board.classList.add("boards-item");
   board.innerHTML = `
-  <span class="title">${textarea}</span>
+  <span contenteditable="true" class="title">${textarea.value}</span>
   <span class="del-board">&#10006</span>
 
-  <div class="list"></div>`;
+  <div class="list"></div>
+  
+  <div class="add-btn">
+    <button
+      type="button"
+      class="btn-tasks"
+      >Новая задача</button>
+  <div>`;
   boards.append(board);
 
   delBoard();
@@ -45,7 +52,7 @@ function addBoards() {
 
 btn.addEventListener("click", () => {
   addBoards();
-  textarea = "";
+  textarea.value = "";
 });
 
 function delBoard() {
@@ -62,21 +69,11 @@ function delBoard() {
   }
 }
 
-// function addTask() {
-//   // const cancelBtn = document.getElementById("close-btn");
-//   var lists = document.querySelectorAll(".list");
+function changeTitle() {
+  const titles = document.querySelectorAll(".title");
 
-//   var name = document.querySelector(".task-name").value;
-//   var form = document.querySelector(".task-description").value;
-
-//   const list = document.createElement("div");
-//   list.classList.add("list__item");
-//   list.innerHTML = `<span data-bs-target="#taskModal">${name}</span>`;
-//   lists.appendChild(list);
-// }
-
-// btn.addEventListener("click", () => {
-//   addTask();
-//   var textarea = document.querySelector(".task-name");
-//   textarea.value = "";
-// });
+  titles.forEach((title) => {
+    title.addEventListener("click", (e) => (e.target.textContent = ""));
+  });
+}
+changeTitle();

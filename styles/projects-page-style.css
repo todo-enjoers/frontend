@@ -171,6 +171,7 @@
   flex-direction: column;
   align-self: baseline;
   max-width: 300px;
+  min-height: 100px;
   width: 100%;
   background-color: #1b4a61;
   margin: 0 15px;
@@ -199,4 +200,16 @@
   margin: 0;
   color: #fefefe;
   font-weight: 600;
+}
+
+.add-btn {
+  text-align: center;
+}
+
+.btn-tasks {
+  width: 150px;
+  border: none;
+  background: #2d7ca3;
+  color: #fefefe;
+  border-radius: 3px;
 }
