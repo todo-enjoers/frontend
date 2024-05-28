@@ -19,39 +19,71 @@
 
     <!-- Подключение файла с собственным стилями -->
     <link rel="stylesheet" href="../styles/nav-bar-style.css" />
-    <link rel="stylesheet" href="../styles/to-do-style.css">
+    <link rel="stylesheet" href="../styles/to-do-style.css" />
   </head>
   <body class="body">
-
     <!-- Основное содержание страницы -->
     <main class="app">
-        <button class="open-navbar" onclick="openNav()">≡</и>
-        <button class="addproject-button">Новый проект</button>
+        <h1 class="app-name">To-Do Desktop</h1>
+      <!-- Модальное окно для создания проекта -->
+      <div class="modal">
+        <div class="modal-content">
+          <p class="modal-title">Создание проекта</p>
+
+          <!-- Кнопка для закрытия модального окна -->
+          <button class="modal-close-button">&times;</button>
+
+          <!-- Контент модального окна -->
+          <form class="projectname-form" id="projectName">
+            <div class="projectname-form-wrapper">
+              <label for="projectName" class="name">Название проекта</label>
+              <textarea
+                id="projectName"
+                type="text"
+                class="project-name-text"
+              ></textarea>
+            </div>
+          </form>
+
+          <!-- Кнопка для создания проекта -->
+          <button
+            id="createProject"
+            class="create-project-button"
+            type=""
+          >
+            Создать проект
+          </button>
+        </div>
+      </div>
+      <button id="addProject" class="addproject-button">Новый проект</button>
     </main>
+
+    <button class="open-navbar" onclick="openNav()">≡</button>
 
     <!-- Панель навигации -->
     <nav>
-        <div id="side-bar" class="nav-bar">
-            <span class="control">Управление</span>
+      <div id="side-bar" class="nav-bar">
+        <span class="control">Управление</span>
 
-            <a href="#" class="main-link">Главная</a>
+        <a href="#" class="main-link">Главная</a>
 
-            <!-- Лист с проектами -->
-            <span class="all-projects">Проекты</span>
-            <menu id="menu">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#" class="project-name">Проект 1</a>
-                <a href="#" class="project-name">Проект 1</a>
-                <a href="#" class="project-name">Проект 1</a>
-            </menu>
+        <!-- Лист с проектами -->
+        <span class="all-projects">Проекты</span>
+        <menu id="menu">
+          <span href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</span
+          >
+        </menu>
 
-            <!-- Ссылки для выхода из аккаунта и смены пароля -->
-            <div class="logout-wrapper">
-                <a href="change-password-page.html" class="password-change">Сменить пароль</a>
+        <!-- Ссылки для выхода из аккаунта и смены пароля -->
+        <div class="logout-wrapper">
+          <a href="change-password-page.html" class="password-change"
+            >Сменить пароль</a
+          >
 
-                <a class="logout" href="entry-page.html">Выйти</a>
-            </div>
+          <a class="logout" href="entry-page.html">Выйти</a>
         </div>
+      </div>
     </nav>
 
     <script src="../scripts/to-do-scripts.js"></script>

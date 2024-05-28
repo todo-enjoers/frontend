@@ -81,6 +81,7 @@
   text-decoration: none;
   font-size: 36px;
   color: #fefefe;
+  cursor: pointer;
 }
 
 .logout-wrapper {
