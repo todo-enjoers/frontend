@@ -39,6 +39,7 @@ function createProject() {
     const project = document.createElement("span");
     project.classList.add("project-name");
     project.textContent = textarea.value;
+    project.setAttribute("onclick", "document.location='projects-page.html'");
     projects.appendChild(project);
     textarea.value = "";
     value = "";
