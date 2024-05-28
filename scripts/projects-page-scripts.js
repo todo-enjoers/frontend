@@ -34,7 +34,7 @@ function addBoards() {
   const board = document.createElement("div");
   board.classList.add("boards-item");
   board.innerHTML = `
-  <span contenteditable="true" class="title">${textarea.value}</span>
+  <span contenteditable="true" class="title" onclick="document.location='projects-page.html'">${textarea.value}</span>
   <span class="del-board">&#10006</span>
 
   <div class="list"></div>
