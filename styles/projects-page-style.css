@@ -24,8 +24,24 @@
   cursor: pointer;
 }
 
+.app {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url(../img/todoback3.jpg);
+  filter: brightness(100%);
+}
+
+.app-name {
+  padding-top: 20px;
+  text-align: center;
+  color: #e7f0fd;
+  font-weight: 500;
+  font-size: 50px;
+}
+
 .addboard-button {
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,26 +61,6 @@
 
 .addboard-button:hover {
   background: #143647;
-}
-
-.app {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-    url(../img/todoback3.jpg);
-  filter: brightness(100%);
-}
-
-.app-name {
-  display: flex;
-  position: absolute;
-  margin-top: 20px;
-  left: 50%;
-  transform: translate(-50%);
-  height: 250px;
-  color: #e7f0fd;
-  font-weight: 500;
-  font-size: 50px;
 }
 
 .modal-close-button {
@@ -163,4 +159,44 @@
   color: #fefefe;
   font-weight: 400;
   cursor: pointer;
+}
+
+.boards {
+  display: flex;
+  width: 100%;
+}
+
+.boards-item {
+  display: flex;
+  flex-direction: column;
+  align-self: baseline;
+  max-width: 300px;
+  width: 100%;
+  background-color: #1b4a61;
+  margin: 0 15px;
+  padding: 10px;
+  transition: 0.3 all ease;
+  border-radius: 10px;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  color: #fefefe;
+  font-weight: 500;
+  padding: 5px 0;
+}
+
+.title:focus {
+  outline: 2px solid #62a2fc77;
+}
+
+.del-board {
+  cursor: pointer;
+  position: relative;
+  left: 255px;
+  bottom: 25px;
+  margin: 0;
+  color: #fefefe;
+  font-weight: 600;
 }
