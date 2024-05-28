@@ -18,7 +18,70 @@
     />
 
     <!-- Подключение файла с собственным стилями -->
-    <link rel="stylesheet" href="../styles/projects-page-style.css">
+    <link rel="stylesheet" href="../styles/projects-page-style.css" />
   </head>
-  <body></body>
+  <body class="body">
+    <header class="app"><h1 class="app-name">To-Do Desktop</h1></header>
+
+    <!-- Основное содержание страницы -->
+    <main class="app">
+      <!-- Модальное окно для создания доски -->
+      <div class="modal">
+        <div class="modal-content">
+          <p class="modal-title">Создание доски</p>
+
+          <!-- Кнопка для закрытия модального окна -->
+          <button class="modal-close-button">&times;</button>
+
+          <!-- Контент модального окна -->
+          <form class="boardname-form" id="boardName">
+            <div class="boardname-form-wrapper">
+              <label for="boardName" class="name">Название доски</label>
+              <textarea
+                id="boardName"
+                type="text"
+                class="board-name-text"
+              ></textarea>
+            </div>
+          </form>
+
+          <!-- Кнопка для создания доски -->
+          <button id="createBoard" class="create-board-button" type="">
+            Создать доску
+          </button>
+        </div>
+      </div>
+      <button id="addBoard" class="addboard-button">Новая доска</button>
+    </main>
+
+    <button class="open-navbar" onclick="openNav()">≡</button>
+
+    <!-- Панель навигации -->
+    <nav>
+      <div id="side-bar" class="nav-bar">
+        <span class="control">Управление</span>
+
+        <a href="#" class="main-link">Главная</a>
+
+        <!-- Лист с проектами -->
+        <span class="all-projects">Проекты</span>
+        <menu id="menu">
+          <span href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</span
+          >
+        </menu>
+
+        <!-- Ссылки для выхода из аккаунта и смены пароля -->
+        <div class="logout-wrapper">
+          <a href="change-password-page.html" class="password-change"
+            >Сменить пароль</a
+          >
+
+          <a class="logout" href="entry-page.html">Выйти</a>
+        </div>
+      </div>
+    </nav>
+
+    <script src=""></script>
+  </body>
 </html>
